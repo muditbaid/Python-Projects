@@ -1,6 +1,4 @@
-# Name: Mudit Baid
-# UGA ID: 811464288
-# BLOBS Game
+### BLOBS Game
 
 This is a Python implementation of the BLOBS game, which is similar to Othello. The objective is to have the maximum number of your color ('X' or 'O') on the board at the end of the game.
 
