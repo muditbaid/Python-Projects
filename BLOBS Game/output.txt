@@ -1,0 +1,115 @@
+1. Random vs Random
+>>> from blobs import *
+>>> BLOBS().play_game(random_player,random_player)
+X O X X X
+X O X X O
+X X X X O
+X X O O X
+O X O O X
+1
+>>> BLOBS().play_game(random_player,random_player)
+X O O O X
+X X O X X
+X X O X O
+X O O O O
+O O X X X
+1
+>>> BLOBS().play_game(random_player,random_player)
+X X X X O
+O O O X O
+X O O X X
+O X X O X
+O O O O X
+-1
+>>> BLOBS().play_game(random_player,random_player)
+O X X O O
+O O X X X
+X X O O O
+X X O O X
+O X X X X
+1
+>>> BLOBS().play_game(random_player,random_player)
+O O O O O
+O X O O X
+O X X O O
+O O X X O
+O O O X O
+-1
+
+
+2. Random vs Minimax with cutoff
+
+>>> from blobs import *
+>>> BLOBS().play_game(random_player,minmax_cutoff_player)
+X X X X X 
+X X X X X
+X X X O X
+X X X X X
+O X X X X
+1
+>>> BLOBS().play_game(random_player,minmax_cutoff_player)
+X X X X X 
+X X X O X
+X X X X X
+X X X O X
+X X X X X
+1
+>>> BLOBS().play_game(random_player,minmax_cutoff_player)
+X X X X X 
+X X X X X
+X O X X X
+X X X X X
+X X X X O
+1
+>>> BLOBS().play_game(random_player,minmax_cutoff_player)
+X X X X X 
+O X X X X
+X X X O X
+X X X O X
+X X X X X
+1
+>>> BLOBS().play_game(random_player,minmax_cutoff_player)
+X X X X X 
+X X X X X
+X O O X X
+X X X O X
+X X X X X
+1
+
+3. Minimax with cutoff vs Minimax with cutoff and α-β pruning
+
+>>> BLOBS().play_game(minmax_cutoff_player,alpha_beta_pruning_player) 
+X X O O X 
+X O X X X
+X O X X O
+X X X O X
+X X O X X
+1
+>>> BLOBS().play_game(minmax_cutoff_player,alpha_beta_pruning_player)
+X X O O X 
+X O X X X
+X O X X O
+X X X O X
+X X O X X
+1
+>>> BLOBS().play_game(minmax_cutoff_player,alpha_beta_pruning_player)
+X X O O X 
+X O X X X
+X O X X O
+X X X O X
+X X O X X
+1
+>>> BLOBS().play_game(minmax_cutoff_player,alpha_beta_pruning_player)
+X X O O X 
+X O X X X
+X O X X O
+X X X O X
+X X O X X
+1
+>>> BLOBS().play_game(minmax_cutoff_player,alpha_beta_pruning_player)
+X X O O X 
+X O X X X
+X O X X O
+X X X O X
+X X O X X
+1
